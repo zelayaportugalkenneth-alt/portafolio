@@ -1,0 +1,783 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Portafolio | Zelaya Kenneth</title>
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #111111;
+            color: white;
+        }
+
+
+        /* =========================
+           MENU SUPERIOR
+        ========================== */
+
+        header {
+            width: 100%;
+            padding: 25px 7%;
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            background-color: #111111;
+
+            border-bottom: 1px solid #292929;
+        }
+
+        .logo {
+            color: #ffae00;
+
+            font-size: 23px;
+
+            font-weight: bold;
+
+            letter-spacing: 2px;
+        }
+
+        nav {
+            display: flex;
+            gap: 10px;
+        }
+
+        nav button {
+            border: none;
+
+            background: transparent;
+
+            color: white;
+
+            padding: 10px 16px;
+
+            font-size: 14px;
+
+            cursor: pointer;
+
+            border-radius: 20px;
+
+            transition: 0.3s;
+        }
+
+        nav button:hover {
+            background-color: #ffae00;
+
+            color: #111111;
+        }
+
+
+        /* =========================
+           PRIMERA PAGINA
+           PORTAFOLIO
+        ========================== */
+
+        .inicio {
+            min-height: 650px;
+
+            padding: 80px 7%;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            text-align: center;
+
+            background:
+                radial-gradient(
+                    circle at center,
+                    #382600 0%,
+                    #171717 45%,
+                    #111111 80%
+                );
+        }
+
+        .inicio-contenido {
+            max-width: 1100px;
+        }
+
+        .etiqueta {
+            color: #ffae00;
+
+            font-size: 18px;
+
+            letter-spacing: 5px;
+
+            margin-bottom: 25px;
+        }
+
+        .inicio h1 {
+            font-size: clamp(70px, 13vw, 170px);
+
+            line-height: 0.85;
+
+            font-weight: 900;
+
+            letter-spacing: -5px;
+
+            text-transform: uppercase;
+        }
+
+        .inicio h1 span {
+            color: #ffae00;
+        }
+
+        .subtitulo {
+            margin-top: 35px;
+
+            color: #bcbcbc;
+
+            font-size: 19px;
+
+            letter-spacing: 2px;
+        }
+
+        .linea {
+            width: 100px;
+
+            height: 5px;
+
+            background-color: #ffae00;
+
+            margin: 35px auto 0;
+        }
+
+
+        /* =========================
+           SEGUNDA PAGINA
+           SOBRE MI
+        ========================== */
+
+        .sobre-mi {
+            min-height: 650px;
+
+            padding: 90px 7%;
+
+            background-color: #f2f2f2;
+
+            color: #111111;
+        }
+
+        .titulo-seccion small {
+            color: #e89500;
+
+            font-size: 14px;
+
+            letter-spacing: 4px;
+
+            font-weight: bold;
+        }
+
+        .titulo-seccion h2 {
+            font-size: 55px;
+
+            margin-top: 12px;
+
+            margin-bottom: 45px;
+        }
+
+        .sobre-contenido {
+            max-width: 1100px;
+
+            margin: auto;
+
+            display: grid;
+
+            grid-template-columns: 1fr 1fr;
+
+            gap: 70px;
+
+            align-items: center;
+        }
+
+        .sobre-texto h3 {
+            font-size: 35px;
+
+            margin-bottom: 20px;
+        }
+
+        .sobre-texto p {
+            color: #555555;
+
+            font-size: 18px;
+
+            line-height: 1.8;
+
+            margin-bottom: 18px;
+        }
+
+        /* TARJETA DE DATOS */
+
+        .datos {
+            background-color: #202020;
+
+            color: white;
+
+            padding: 40px;
+
+            border-right: 12px solid #ffae00;
+        }
+
+        .datos h3 {
+            font-size: 30px;
+
+            margin-bottom: 25px;
+        }
+
+        .dato {
+            margin-bottom: 18px;
+
+            padding-bottom: 15px;
+
+            border-bottom: 1px solid #444;
+        }
+
+        .dato strong {
+            color: #ffae00;
+
+            display: block;
+
+            margin-bottom: 5px;
+        }
+
+        .dato p {
+            color: #cccccc;
+        }
+
+
+        /* BOTON WHATSAPP */
+
+        .contactame {
+            display: inline-block;
+
+            margin-top: 20px;
+
+            padding: 16px 35px;
+
+            background-color: #ffae00;
+
+            color: #111111;
+
+            text-decoration: none;
+
+            font-weight: bold;
+
+            border-radius: 30px;
+
+            transition: 0.3s;
+        }
+
+        .contactame:hover {
+            background-color: #ffc247;
+
+            transform: translateY(-3px);
+        }
+
+
+        /* =========================
+           TERCERA PAGINA
+           PROYECTOS
+        ========================== */
+
+        .proyectos {
+            min-height: 700px;
+
+            padding: 90px 7%;
+
+            background-color: #17452e;
+        }
+
+        .proyectos .titulo-seccion small {
+            color: #ffae00;
+        }
+
+        .proyectos .titulo-seccion h2 {
+            color: white;
+        }
+
+        .proyectos-descripcion {
+            color: #c7d3cb;
+
+            font-size: 17px;
+
+            margin-top: -25px;
+
+            margin-bottom: 45px;
+        }
+
+        .proyectos-grid {
+            display: grid;
+
+            grid-template-columns: repeat(3, 1fr);
+
+            gap: 25px;
+        }
+
+        /* CADA PROYECTO */
+
+        .proyecto {
+            background-color: #103521;
+
+            border: 1px solid #31553f;
+
+            transition: 0.3s;
+
+            overflow: hidden;
+        }
+
+        .proyecto:hover {
+            transform: translateY(-8px);
+
+            border-color: #ffae00;
+        }
+
+        /* ESPACIO PARA LAS FOTOS */
+
+        .foto-proyecto {
+            height: 300px;
+
+            background-color: #e5a500;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            color: #222;
+
+            font-size: 22px;
+
+            font-weight: bold;
+
+            position: relative;
+        }
+
+        .foto-proyecto::after {
+            content: "AQUÍ VA TU FOTO";
+
+            position: absolute;
+
+            color: #7a5300;
+
+            font-size: 16px;
+        }
+
+        .proyecto-info {
+            padding: 25px;
+        }
+
+        .proyecto-info h3 {
+            color: white;
+
+            font-size: 25px;
+
+            margin-bottom: 10px;
+        }
+
+        .proyecto-info p {
+            color: #b8c4bc;
+
+            line-height: 1.6;
+        }
+
+
+        /* =========================
+           PIE DE PAGINA
+        ========================== */
+
+        footer {
+            background-color: #090909;
+
+            padding: 25px;
+
+            text-align: center;
+
+            color: #777777;
+        }
+
+        footer span {
+            color: #ffae00;
+        }
+
+
+        /* =========================
+           RESPONSIVE
+        ========================== */
+
+        @media (max-width: 900px) {
+
+            header {
+                flex-direction: column;
+
+                gap: 20px;
+            }
+
+            nav {
+                flex-wrap: wrap;
+
+                justify-content: center;
+            }
+
+            .inicio {
+                min-height: 600px;
+            }
+
+            .sobre-contenido {
+                grid-template-columns: 1fr;
+            }
+
+            .proyectos-grid {
+                grid-template-columns: 1fr;
+            }
+
+        }
+
+
+        @media (max-width: 500px) {
+
+            .inicio h1 {
+                font-size: 65px;
+
+                letter-spacing: -2px;
+            }
+
+            .titulo-seccion h2 {
+                font-size: 40px;
+            }
+
+            .datos {
+                padding: 25px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- =================================================
+         MENU
+    ================================================== -->
+
+    <header>
+
+        <div class="logo">
+            ZELAYA KENNETH
+        </div>
+
+        <nav>
+
+            <!-- Por ahora son solamente botones visuales -->
+
+            <button>Inicio</button>
+
+            <button>Sobre mí</button>
+
+            <button>Proyectos</button>
+
+        </nav>
+
+    </header>
+
+
+
+    <!-- =================================================
+         PRIMERA PAGINA
+    ================================================== -->
+
+    <section class="inicio">
+
+        <div class="inicio-contenido">
+
+            <div class="etiqueta">
+                MI PORTAFOLIO
+            </div>
+
+            <h1>
+                PORTA<span>FOLIO</span>
+            </h1>
+
+            <div class="subtitulo">
+                ZELAYA KENNETH
+            </div>
+
+            <div class="linea"></div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =================================================
+         SEGUNDA PAGINA
+         SOBRE MI
+    ================================================== -->
+
+    <section class="sobre-mi">
+
+        <div class="titulo-seccion">
+
+            <small>SOBRE MÍ</small>
+
+            <h2>
+                Hola, soy Kenneth.
+            </h2>
+
+        </div>
+
+
+        <div class="sobre-contenido">
+
+
+            <!-- TEXTO -->
+
+            <div class="sobre-texto">
+
+                <h3>
+                    ¡Bienvenido a mi portafolio!
+                </h3>
+
+                <p>
+                    Mi nombre es <strong>Zelaya Kenneth</strong>.
+                    Este es mi portafolio personal donde
+                    presentaré mis trabajos, proyectos y
+                    conocimientos.
+                </p>
+
+                <p>
+                    Actualmente estoy aprendiendo y
+                    desarrollando mis habilidades en el área
+                    de tecnología, informática y desarrollo web.
+                </p>
+
+
+                <!-- BOTON WHATSAPP -->
+
+                <a
+                    class="contactame"
+                    href="https://wa.me/qr/Y43FQ74HMUORI1"
+                    target="_blank"
+                >
+                    CONTACTAME
+                </a>
+
+            </div>
+
+
+
+            <!-- INFORMACION -->
+
+            <div class="datos">
+
+                <h3>
+                    Datos personales
+                </h3>
+
+                <div class="dato">
+
+                    <strong>
+                        NOMBRE
+                    </strong>
+
+                    <p>
+                        Zelaya Kenneth
+                    </p>
+
+                </div>
+
+
+                <div class="dato">
+
+                    <strong>
+                        ÁREA
+                    </strong>
+
+                    <p>
+                        Tecnología e informática
+                    </p>
+
+                </div>
+
+
+                <div class="dato">
+
+                    <strong>
+                        INTERESES
+                    </strong>
+
+                    <p>
+                        Programación, diseño y desarrollo web
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =================================================
+         TERCERA PAGINA
+         PROYECTOS
+    ================================================== -->
+
+    <section class="proyectos">
+
+        <div class="titulo-seccion">
+
+            <small>
+                MIS TRABAJOS
+            </small>
+
+            <h2>
+                Mis Proyectos
+            </h2>
+
+        </div>
+
+
+        <p class="proyectos-descripcion">
+
+            Aquí colocaré algunos de los proyectos
+            que he realizado durante mi formación.
+
+        </p>
+
+
+
+        <!-- =================================================
+             TRES PROYECTOS
+        ================================================== -->
+
+        <div class="proyectos-grid">
+
+
+            <!-- PROYECTO 1 -->
+
+            <div class="proyecto">
+
+                <div class="foto-proyecto">
+
+                    <img src="imagenes/proyecto3.png.jpeg">
+                </div>
+
+                <div class="proyecto-info">
+
+                    <h3>
+                        Proyecto 01
+                    </h3>
+
+                    <p>
+                        este esun login para registro de entrevistas.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- PROYECTO 2 -->
+
+            <div class="proyecto">
+
+                <div class="foto-proyecto">
+
+                    <img src="imagenes/proyecto2.png.jpg">
+
+                </div>
+
+                <div class="proyecto-info">
+
+                    <h3>
+                        Proyecto 02
+                    </h3>
+
+                    <p>
+                       esto es una pagina parafotografias.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- PROYECTO 3 -->
+
+            <div class="proyecto">
+
+                <div class="foto-proyecto">
+
+                    <img src="imagenes/proyecto1.png.jpg">
+
+                </div>
+
+                <div class="proyecto-info">
+
+                    <h3>
+                        Proyecto 03
+                    </h3>
+
+                    <p>
+                        esto es una pagina para ejercicios.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =================================================
+         PIE DE PAGINA
+    ================================================== -->
+
+    <footer>
+
+        © 2026
+
+        <span>
+            ZELAYA KENNETH
+        </span>
+
+        — PORTAFOLIO
+
+    </footer>
+
+
+</body>
+
+</html>
